@@ -39,6 +39,10 @@ class MyStudentClass(unittest.TestCase):
         with self.assertRaises(ValueError):
             s = sc.Student('Blankenship', 'Ryan', 'Web Development', 'None')
 
+    def test_object_not_created_error_gpa_range_check(self):
+        with self.assertRaises(ValueError):
+            s = sc.Student('Blankenship', 'Ryan', 'Web Development', 4.0)
+
 
 if __name__ == '__main__':
     unittest.main()
