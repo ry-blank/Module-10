@@ -14,10 +14,14 @@ class MyStudentClass(unittest.TestCase):
         self.assertEqual(self.student.first_name, 'Ryan')
 
     def test_object_created_all_attributes(self):
-        self.assertEqual(self.student.last_name, 'Blankenship')
-        self.assertEqual(self.student.first_name, 'Ryan')
-        self.assertEqual(self.student.major, 'Web Development')
-        self.assertEqual(self.student.gpa, 2.0)
+        student = sc.Student('Blankenship', 'Ryan', 'Web Development', 2.0)
+        assert student.last_name == 'Blankenship'
+        assert student.first_name == 'Ryan'
+        assert student.major == 'Web Development'
+        assert student.gpa == 2.0
+
+    def test_student_str(self):
+        self.assertEqual(str(self.student), 'Blankenship, Ryan has major Web Development with gpa: 2.0')
 
 
 if __name__ == '__main__':
