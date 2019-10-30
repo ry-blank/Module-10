@@ -31,9 +31,9 @@ class MyStudentClass(unittest.TestCase):
         with self.assertRaises(ValueError):
             s = sc.Student('Blankenship', '123', 'Web Development', 2.0)
 
-    # def test_object_not_created_error_major(self):
-    #     with self.assertRaises(ValueError):
-    #         s = sc.Student('Blankenship', 'Ryan', '123', 2.0)
+    def test_object_not_created_error_major(self):
+        with self.assertRaises(ValueError):
+            s = sc.Student('Blankenship', 'Ryan', '123', 2.0)
 
     def test_object_not_created_error_gpa(self):
         with self.assertRaises(ValueError):
